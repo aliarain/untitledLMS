@@ -11,7 +11,8 @@ import Events from './components/Events'
 import Forum from './components/Forum'
 import Resources from './components/Resources'
 import Settings from './components/Settings'
-
+import QuestionDetails from './components/sub-components/Forum/QuestionDetails'
+import CreateQuestion from './components/sub-components/Forum/CreateQuestion'
 
 function App() {
   return (
@@ -25,6 +26,8 @@ function App() {
       <Route path='/profile' component={Profile} />
       <Route path='/events' component={Events} />
       <Route path='/forum' component={Forum} />
+      <Route path='/question/:id' component={QuestionDetails} />
+      <Route path='/ask' component={CreateQuestion} />
       <Route path='/resources' component={Resources} />
       <Route path='/settings' component={Settings} />
       <Route path='/chat' component={Chat} />
