@@ -1,23 +1,18 @@
-import React, { useState } from 'react';
-import Picker from 'emoji-picker-react';
- 
-const Chat = () => {
-  const [chosenEmoji, setChosenEmoji] = useState(null);
- 
-  const onEmojiClick = (event, emojiObject) => {
-    setChosenEmoji(emojiObject);
-  };
- 
-  return (
-    <div>
-      {chosenEmoji ? (
-        <span>You chose: {chosenEmoji.emoji}</span>
-      ) : (
-        <span>No emoji Chosen</span>
-      )}
-      <Picker onEmojiClick={onEmojiClick} />
-    </div>
-  );
-};
 
-export default Chat
+import React, { Component } from 'react'
+import ChatList from './sub-components/ChatList'
+import SendArea from './sub-components/ChatBoxes/SendArea'
+
+export default class Chat extends Component {
+    render() {
+        return (
+            <div className='routeArea'>
+                <div className='chat-area'>
+                 <ChatList />
+                 </div>
+                 <SendArea />
+            </div>
+        )
+    }
+}
+
