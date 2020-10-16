@@ -10,7 +10,7 @@ export class SignUp extends Component {
       password: '',
       firstName: '',
       lastName: '',
-      bio: ''
+      grade: ''
   }
   handleChange = (e) =>{
       this.setState({
@@ -54,8 +54,8 @@ export class SignUp extends Component {
                      <input type="text" id="lastName" required onChange={this.handleChange} />
                   </div>
                   <div className="input-field">
-                     <label htmlFor="lastName">Bio</label>
-                     <input type="text" id="bio" required onChange={this.handleChange} />
+                     <label htmlFor="grade">Grade</label>
+                     <input type="number" id="grade" min="6" max="9" required onChange={this.handleChange} />
                   </div>
            <div className="input-field">
               <button className='btn lighten-1 z-depth-0'>Register</button>
