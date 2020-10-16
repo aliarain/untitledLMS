@@ -4,6 +4,8 @@ import { compose } from 'redux'
 import { firestoreConnect } from 'react-redux-firebase'
 import { Redirect } from 'react-router-dom'
 import moment from 'moment'
+import { answerQuestion } from '../../../store/action/forumActions'
+import QuestionAnswers from './QuestionAnswers'
 
 export class QuestionDetails extends Component {
     render() {
@@ -12,6 +14,20 @@ export class QuestionDetails extends Component {
              return <Redirect to='/forum' />
          }
     const questionid = question.id
+    console.log(question.answers)
+    var answer = ''
+     const handleChange = (e) =>{
+         answer = e.target.value
+     }
+     const handleSubmit = (e) =>{
+        e.preventDefault();
+        if(answer!==''){
+        console.log(answer)
+        this.props.answerQuestion(questionid,answer)
+        document.getElementById("form").reset();
+        answer = ''
+        }
+    }
         return (
             <div className='routeArea forum-question'>
             <div className='forumQuestionArea'>
@@ -23,13 +39,15 @@ export class QuestionDetails extends Component {
             </div>
             <span className='forumTitle'>Answers</span>
             <div className='questionAnswerArea'>
-
+            { question.answers && question.answers.map(answer => {
+                return( <QuestionAnswers answer={answer.answer} name={answer.name} time={answer.timeAnswered}/>   )}
+                )}
             </div>
             </div>
             <div className='forumAnswerArea'>
             <form className='forum-send-area' id='form'>
-            <textarea className='forum-txtarea' id='message' placeholder='Type your answer......'></textarea>
-            <div className='sendBtn material-icons' >send</div>
+            <textarea className='forum-txtarea' onChange={handleChange} id='message' placeholder='Type your answer......'></textarea>
+            <div className='sendBtn material-icons' onClick={handleSubmit} >send</div>
         </form>
             </div>
             </div>
@@ -50,5 +68,10 @@ const mapStatetoProps = (state, ownProps) => {
     }
 }
 
+const mapDispatchToProps = (dispatch) => {
+    return {
+        answerQuestion: (questionid,message) => dispatch(answerQuestion(questionid,message))
+    }
+}
 
-export default compose(connect(mapStatetoProps,null),firestoreConnect(() => ['events','users']))(QuestionDetails)
+export default compose(connect(mapStatetoProps,mapDispatchToProps),firestoreConnect(() => ['events','users']))(QuestionDetails)

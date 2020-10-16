@@ -18,3 +18,24 @@ export const createQuestion = (project) =>{
         
     }
 };
+
+export const answerQuestion = (eventId,answer) =>{
+    console.log(typeof(answer))
+    return (dispatch, getState, {getFirebase,getFirestore})=> {
+        const firestore = getFirestore();
+        const profile = getState().firebase.profile;
+        const auth = getState().firebase.auth;
+        const arrayUnion = firestore.FieldValue.arrayUnion;
+        let personandanswer = {uid:auth.uid,name:profile.firstName,answer:answer,timeAnswered:new Date()}
+        // const increment =  firestore.FieldValue.increment(1);
+        console.log(personandanswer)
+        firestore.collection('forum').doc(eventId).update({
+           answers: arrayUnion(personandanswer),
+        }).then(()=>{
+            dispatch({type: 'ANSWER_QUESTION',eventId});
+        }).catch((err) => {
+            dispatch({type: 'ANSWER_QUESTION_ERROR',err});
+        });
+        
+    }
+};

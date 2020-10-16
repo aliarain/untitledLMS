@@ -237,4 +237,23 @@ justify-content: space-between;
     height: 100%;
     border-radius: 1em;
     background-color: #161819;
+    padding: 2%;
+    overflow-y: scroll;
 }
+
+.answer{
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    font-family: 'Ubuntu';
+    width: 100%;
+    border-bottom: 1px solid #00b074;
+}
+
+.answerContent{
+ font-size: 1.1em;
+}
+.answerAuthor{
+ font-size: 0.75em;
+}
+
