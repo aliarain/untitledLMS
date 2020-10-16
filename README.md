@@ -56,6 +56,7 @@ To learn React, check out the [React documentation](https://reactjs.org/).
  - react-redux-firebase
  - redux-thunk
  - react-redux-dom
+ - momentjs
  
 
 **Please Note :**

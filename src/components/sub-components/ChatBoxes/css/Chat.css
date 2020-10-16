@@ -110,10 +110,10 @@ textarea{
 }
 
 ::-webkit-scrollbar {
-    width: 0px;  /* Remove scrollbar space */
-    background: transparent;  /* Optional: just make scrollbar invisible */
+    width: 3px;  /* Remove scrollbar space */
+    background: #161819;  /* Optional: just make scrollbar invisible */
 }
 /* Optional: show position indicator in red */
 ::-webkit-scrollbar-thumb {
-    background: transparent;
+    background: #00b074;
 }

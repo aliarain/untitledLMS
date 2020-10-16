@@ -19,7 +19,7 @@ export class NavBar extends Component {
                 </NavLink>
                 <span className='profile-data'>
                     <span className='profile-name'>{profile.firstName}</span>
-                    <span className='profile-title'>Student</span>
+        <span className='profile-title'>Student - Grade {profile.grade}</span>
                     </span>
                     <div className='material-icons nav-icon' onClick={this.props.signOut}>login</div>
                 </div>
