@@ -89,3 +89,21 @@
 .email-text{
     color: #00b074;
 }
+
+.signOut-btn{
+    margin-top: 1.5%;
+    width: 20%;
+    height: 85%;
+    background-color: #00b074;
+    font-family: 'Ubuntu', sans-serif;
+    border: none;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.signOut-btn:hover{
+    background-color: #212327;
+    font-family: 'Ubuntu', sans-serif;
+    border: 2px solid #00b074;
+    transform: scale(1.01);
+}

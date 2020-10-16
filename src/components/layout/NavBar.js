@@ -49,7 +49,7 @@ export class NavBar extends Component {
                <span className='nav-link-topic'>Settings</span>
                </NavLink>
                <div className='more-info-sec'>
-                   <span>untitledLMS</span>
+                   <span>CATALYST.LMS</span>
                </div>
             </div>
         )
