@@ -20,6 +20,7 @@ export class Profile extends Component {
                         <span className='profile-set-data-Name'>{profile.firstName} {profile.lastName}</span>
                         <span className='profile-set-data-Email'><a className='email-text' href={'mailto:'+auth.email}>{auth.email}</a> - Student</span>
                         <span className='profile-set-data-Grade'>Grade {profile.grade}</span>
+                        <button className='lighten-1 z-depth-0 signOut-btn' onClick={this.props.signOut}>Sign Out</button>
                         </div>
                     </div>
                     <div className='profile-update-information'>
