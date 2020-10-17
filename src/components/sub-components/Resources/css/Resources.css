@@ -1,0 +1,44 @@
+.textBookArea{
+    width: 100%;
+    height: 100%;
+    padding: 5%;
+}
+
+.TextBooks{
+    font-size: 1.5em;
+}
+
+.mediumAreas{
+    width: 100%;
+    height: 100%;
+    /* background-color: #212327; */
+    padding: 1% 0 0 2.5%;
+    display: flex;
+    flex-direction: row;
+    color: #fff;
+    font-family: 'Ubuntu';
+}
+
+.EM,.SM,.TM{
+    width: 33.33%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.subject{
+    width: fit-content;
+    height: 6%;
+    font-size: 1em;
+    padding: 2.5%;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+}
+
+.subject:hover{
+    transform: scale(1.05);
+    background-color: #212327;
+    color: #00b074;
+    border-radius: 1em;
+}

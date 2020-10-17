@@ -1,12 +1,35 @@
 import React from 'react'
 import { connect } from 'react-redux';
+import { listGrade9 } from './TextBookList/Grade9Index'
 
 const TextBooks = (props) => {
+    let textBookData = JSON.parse(listGrade9)
+    let EM = textBookData.EnglishMedium
+    let SM = textBookData.SinhalaMedium
     return (
         <div className='textBookArea'>
-             <span className='forumTitle'>Text Books</span>
+             <span className='forumTitle TextBooks'>Text Books - Grade 0{props.profile.grade}</span>
              <div id='mediumAreas' className='mediumAreas'>
-
+                 <div className='EM'>
+             <span className='forumTitle'>English Medium</span>  
+                {EM && EM.map(book=>{
+                    return(
+                    <span className='subject'>○ {book}</span>
+                    )
+                })}
+                </div>
+                 <div className='SM'>
+             <span className='forumTitle'>Sinhala Medium</span>  
+                {SM && SM.map(book=>{
+                    return(
+                    <span className='subject'>○ {book}</span>
+                    )
+                })}
+                </div>
+                <div className='TM'>
+                <span className='forumTitle'>Tamil Medium</span> 
+                Coming Soon....
+                </div>
              </div>
         </div>
     )
