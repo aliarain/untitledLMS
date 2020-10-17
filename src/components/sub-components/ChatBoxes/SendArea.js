@@ -3,6 +3,7 @@ import './css/Chat.css'
 import {sendMsg} from '../../../store/action/chatActions'
 import {connect} from 'react-redux'
 import Emojis from './Emojis'
+import Popup from 'reactjs-popup';
 
 const SendArea = (props) => {
     var state = {
@@ -23,10 +24,6 @@ const SendArea = (props) => {
          }
     }
 
-    const handleOpenEmojiPanel = () => {
-        console.log('this button should open/close the emoji panel')
-    }
-
     const handleSubmit = (e) =>{
         e.preventDefault();
         if(state.message!==''){
@@ -39,16 +36,23 @@ const SendArea = (props) => {
     }
     return (
         <form className='send-area' id='form'>
-            <Emojis addEmoji={setEmoji} /> 
-            <textarea id='message' onChange={handleChange} placeholder='Type a message......'></textarea>
-            <div className='sendBtn material-icons' onClick={handleOpenEmojiPanel}>insert_emoticon</div>
+            
+            <textarea id='message' onChange={handleChange} placeholder='Type a message...'></textarea>
+        <Popup 
+            trigger={open => (
+                <div className='sendBtn material-icons'>insert_emoticon</div>
+            )}
+            closeOnDocumentClick
+        >
+        <Emojis addEmoji={setEmoji} /> 
+            </Popup>) 
+            
             <div className='sendBtn material-icons' onClick={handleSubmit}>send</div>
         </form>
     )
 }
 
 const mapStateToProps = (state) => {
-    // console.log(state);
   return {
       auth: state.firebase.auth
   }
