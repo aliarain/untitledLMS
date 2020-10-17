@@ -2,7 +2,6 @@
 import React, { Component } from 'react'
 import ChatList from './sub-components/ChatList'
 import SendArea from './sub-components/ChatBoxes/SendArea'
-import Emojis from '../components/sub-components/ChatBoxes/Emojis'
 
 export default class Chat extends Component {
     render() {

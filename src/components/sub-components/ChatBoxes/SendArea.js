@@ -1,17 +1,30 @@
-import React, { Component, useState } from 'react'
+import React from 'react'
 import './css/Chat.css'
 import {sendMsg} from '../../../store/action/chatActions'
 import {connect} from 'react-redux'
 import Emojis from './Emojis'
-import { render } from '@testing-library/react'
+
 const SendArea = (props) => {
     var state = {
        message: ''
     }
+
     const handleChange = (e) =>{
         state =({
           [e.target.id]:e.target.value
         })
+    }
+
+    const setEmoji = (emoji) =>{
+        let txtarea = document.getElementById('message')
+        txtarea.value += emoji
+        state = {
+            message: txtarea.value
+         }
+    }
+
+    const handleOpenEmojiPanel = () => {
+        console.log('this button should open/close the emoji panel')
     }
 
     const handleSubmit = (e) =>{
@@ -24,25 +37,11 @@ const SendArea = (props) => {
          }
         }
     }
-
-    const HandleAddEmoticon = (e) => {
-        let txtarea = document.getElementById('message')
-        txtarea.value += '🚀'
-        state = {
-            message: txtarea.value
-         }
-    }
-
-    const ShowEmoji = () => {
-        render (
-            <Emojis />
-        )
-        
-    }
     return (
         <form className='send-area' id='form'>
+            <Emojis addEmoji={setEmoji} /> 
             <textarea id='message' onChange={handleChange} placeholder='Type a message......'></textarea>
-            <div className='sendBtn material-icons' onClick={ShowEmoji}>insert_emoticon</div>
+            <div className='sendBtn material-icons' onClick={handleOpenEmojiPanel}>insert_emoticon</div>
             <div className='sendBtn material-icons' onClick={handleSubmit}>send</div>
         </form>
     )

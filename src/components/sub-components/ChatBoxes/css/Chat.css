@@ -119,6 +119,33 @@ textarea{
 }
 
 .emojiPanel {
-    float: right;
-    margin-bottom: -300px;
+    position: absolute;
+    /* float: right; */
+    bottom: 12.5%;
+    right: 1%;
+}
+
+aside.emoji-picker-react {
+    box-shadow: none !important;
+    border: 2px solid #00b074  !important;
+}
+
+nav{
+    background-color: #00b074;
+}
+
+.emoji-group{
+    background-color: #212327;
+}
+
+.emoji-search{
+    background-color: #212327 !important;
+
+}
+
+.emoji-group::before{
+    background-color: #212327 !important;
+    font-family: 'Ubuntu';
+    color: #00b074 !important;
+    font-weight: 500 !important;
 }
