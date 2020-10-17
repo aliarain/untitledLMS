@@ -1,8 +1,9 @@
-import React, { Component } from 'react'
+import React, { Component, useState } from 'react'
 import './css/Chat.css'
 import {sendMsg} from '../../../store/action/chatActions'
 import {connect} from 'react-redux'
-
+import Emojis from './Emojis'
+import { render } from '@testing-library/react'
 const SendArea = (props) => {
     var state = {
        message: ''
@@ -23,19 +24,25 @@ const SendArea = (props) => {
          }
         }
     }
-    const handleAddEmoticon = (e) => {
-        e.preventDefault();
+
+    const HandleAddEmoticon = (e) => {
         let txtarea = document.getElementById('message')
-        txtarea.value += ' \u{1F600}'
+        txtarea.value += '🚀'
         state = {
             message: txtarea.value
          }
     }
 
+    const ShowEmoji = () => {
+        render (
+            <Emojis />
+        )
+        
+    }
     return (
         <form className='send-area' id='form'>
             <textarea id='message' onChange={handleChange} placeholder='Type a message......'></textarea>
-            <div className='sendBtn material-icons' onClick={handleAddEmoticon}>insert_emoticon</div>
+            <div className='sendBtn material-icons' onClick={ShowEmoji}>insert_emoticon</div>
             <div className='sendBtn material-icons' onClick={handleSubmit}>send</div>
         </form>
     )
