@@ -117,3 +117,8 @@ textarea{
 ::-webkit-scrollbar-thumb {
     background: #00b074;
 }
+
+.emojiPanel {
+    float: right;
+    margin-bottom: -300px;
+}

@@ -2,8 +2,8 @@ import React, { Component, useState } from 'react'
 import './css/Chat.css'
 import {sendMsg} from '../../../store/action/chatActions'
 import {connect} from 'react-redux'
-import Picker from 'emoji-picker-react';
-
+import Emojis from './Emojis'
+import { render } from '@testing-library/react'
 const SendArea = (props) => {
     var state = {
        message: ''
@@ -25,28 +25,24 @@ const SendArea = (props) => {
         }
     }
 
-    var realEmoji = ""
-    const [chosenEmoji, setChosenEmoji] = useState("emoji");
-    const onEmojiClick = (event, emojiObject) => {
-      setChosenEmoji(emojiObject);
-      realEmoji = chosenEmoji.emoji
-      console.log(realEmoji)
-      
-    };
-
     const HandleAddEmoticon = (e) => {
         let txtarea = document.getElementById('message')
-        txtarea.value += realEmoji
+        txtarea.value += '🚀'
         state = {
             message: txtarea.value
          }
     }
 
+    const ShowEmoji = () => {
+        render (
+            <Emojis />
+        )
+        
+    }
     return (
         <form className='send-area' id='form'>
-            <Picker onEmojiClick={onEmojiClick} />
             <textarea id='message' onChange={handleChange} placeholder='Type a message......'></textarea>
-            <div className='sendBtn material-icons' onClick={HandleAddEmoticon}>insert_emoticon</div>
+            <div className='sendBtn material-icons' onClick={ShowEmoji}>insert_emoticon</div>
             <div className='sendBtn material-icons' onClick={handleSubmit}>send</div>
         </form>
     )
