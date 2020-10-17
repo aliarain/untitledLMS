@@ -1,18 +1,23 @@
 import React from 'react'
+import { connect } from 'react-redux';
 
-const TextBooks = () => {
-    fetch("/Resources/TextBooks/G09/EnglishMedium/Buddhism-Grade-9-E.json")
-      .then(function(resp){
-         return resp.json();
-      })
-      .then(function(data){
-          console.log(data);
-     });
+const TextBooks = (props) => {
     return (
         <div className='textBookArea'>
              <span className='forumTitle'>Text Books</span>
+             <div id='mediumAreas' className='mediumAreas'>
+
+             </div>
         </div>
     )
 }
 
-export default TextBooks
+const mapStateToProps = (state) => {
+    // console.log(state);
+  return {
+      auth: state.firebase.auth,
+      profile: state.firebase.profile
+  }
+}
+
+export default connect(mapStateToProps,null)(TextBooks)
