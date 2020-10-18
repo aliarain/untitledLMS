@@ -5,7 +5,7 @@ import './sub-components/Resources/css/Resources.css'
 export default class Resources extends Component {
     render() {
         return (
-            <div className='routeArea'>
+            <div className='routeArea routeAreaPadding'>
                  <TextBooks />
             </div>
         )

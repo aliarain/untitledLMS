@@ -10,6 +10,7 @@ import Profile from './components/Profile'
 import Events from './components/Events'
 import Forum from './components/Forum'
 import Resources from './components/Resources'
+import TextBook from './components/sub-components/Resources/TextBook'
 import Settings from './components/Settings'
 import QuestionDetails from './components/sub-components/Forum/QuestionDetails'
 import CreateQuestion from './components/sub-components/Forum/CreateQuestion'
@@ -29,6 +30,8 @@ function App() {
       <Route path='/question/:id' component={QuestionDetails} />
       <Route path='/ask' component={CreateQuestion} />
       <Route path='/resources' component={Resources} />
+      <Route path='/textbook/sinhala/:id' component={TextBook} />
+      <Route path='/textbook/english/:id' component={TextBook} />
       <Route path='/settings' component={Settings} />
       <Route path='/chat' component={Chat} />
       </Switch>

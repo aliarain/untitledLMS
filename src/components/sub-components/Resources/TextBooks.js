@@ -1,6 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux';
 import { listGrade9 } from './TextBookList/Grade9Index'
+import { Link } from 'react-router-dom'
+import Book from './Book'
 
 const TextBooks = (props) => {
     let textBookData = JSON.parse(listGrade9)
@@ -14,7 +16,7 @@ const TextBooks = (props) => {
              <span className='forumTitle'>English Medium</span>  
                 {EM && EM.map(book=>{
                     return(
-                    <span className='subject'>○ {book}</span>
+                    <Link to={'/textbook/english/'+book+'-Grade-'+props.profile.grade+'-E'} className='subject'>○ {book}</Link>
                     )
                 })}
                 </div>
@@ -22,7 +24,7 @@ const TextBooks = (props) => {
              <span className='forumTitle'>Sinhala Medium</span>  
                 {SM && SM.map(book=>{
                     return(
-                    <span className='subject'>○ {book}</span>
+                    <Link to={'/textbook/sinhala/'+book+'-Grade-'+props.profile.grade+'-S'} className='subject'>○ {book}</Link>
                     )
                 })}
                 </div>
@@ -31,6 +33,7 @@ const TextBooks = (props) => {
                 Coming Soon....
                 </div>
              </div>
+             {/* <Book /> */}
         </div>
     )
 }
