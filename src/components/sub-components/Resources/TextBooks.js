@@ -1,13 +1,15 @@
 import React from 'react'
 import { connect } from 'react-redux';
-import { listGrade9 } from './TextBookList/Grade9Index'
+// import { listGrade9 } from './TextBookList/Grade9Index'
 import { Link } from 'react-router-dom'
-import Book from './Book'
+import Data from './TextBookList/Grade9Index.json'
 
 const TextBooks = (props) => {
-    let textBookData = JSON.parse(listGrade9)
-    let EM = textBookData.EnglishMedium
-    let SM = textBookData.SinhalaMedium
+    // let textBookData = JSON.parse(listGrade9)
+    // let EM = textBookData.EnglishMedium
+    // let SM = textBookData.SinhalaMedium
+    let EM = Data.EnglishMedium
+    let SM = Data.SinhalaMedium
     return (
         <div className='textBookArea'>
              <span className='forumTitle TextBooks'>Text Books - Grade 0{props.profile.grade}</span>
@@ -16,15 +18,17 @@ const TextBooks = (props) => {
              <span className='forumTitle'>English Medium</span>  
                 {EM && EM.map(book=>{
                     return(
-                    <Link to={'/textbook/english/'+book+'-Grade-'+props.profile.grade+'-E'} className='subject'>○ {book}</Link>
+                    <Link to={'/textbook/EnglishMedium/'+book.Subject} className='subject'>○ {book.Subject}</Link>
                     )
+                    // console.log(book.Subject)
                 })}
                 </div>
                  <div className='SM'>
              <span className='forumTitle'>Sinhala Medium</span>  
                 {SM && SM.map(book=>{
                     return(
-                    <Link to={'/textbook/sinhala/'+book+'-Grade-'+props.profile.grade+'-S'} className='subject'>○ {book}</Link>
+                    <Link to={'/textbook/SinhalaMedium/'+book.Subject} className='subject'>○ {book.Subject
+                    }</Link>
                     )
                 })}
                 </div>
@@ -33,7 +37,6 @@ const TextBooks = (props) => {
                 Coming Soon....
                 </div>
              </div>
-             {/* <Book /> */}
         </div>
     )
 }

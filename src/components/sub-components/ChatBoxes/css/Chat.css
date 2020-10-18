@@ -121,7 +121,11 @@ textarea{
 .emojiPanel {
     position: absolute;
     bottom: 12.5%;
-    right: 1%;
+    right: 5%;
+}
+
+.popup,#popup-root,.popup-content{
+    all: revert !important;
 }
 
 aside.emoji-picker-react {
@@ -147,4 +151,9 @@ nav{
     font-family: 'Ubuntu';
     color: #00b074 !important;
     font-weight: 500 !important;
+}
+
+path{
+    /* background-color: #00b074; */
+    display: none;
 }

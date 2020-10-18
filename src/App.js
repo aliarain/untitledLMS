@@ -30,8 +30,8 @@ function App() {
       <Route path='/question/:id' component={QuestionDetails} />
       <Route path='/ask' component={CreateQuestion} />
       <Route path='/resources' component={Resources} />
-      <Route path='/textbook/sinhala/:id' component={TextBook} />
-      <Route path='/textbook/english/:id' component={TextBook} />
+      <Route path='/textbook/SinhalaMedium/:id' component={TextBook} />
+      <Route path='/textbook/EnglishMedium/:id' component={TextBook} />
       <Route path='/settings' component={Settings} />
       <Route path='/chat' component={Chat} />
       </Switch>

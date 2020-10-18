@@ -38,15 +38,9 @@ const SendArea = (props) => {
         <form className='send-area' id='form'>
             
             <textarea id='message' onChange={handleChange} placeholder='Type a message...'></textarea>
-        <Popup 
-            trigger={open => (
-                <div className='sendBtn material-icons'>insert_emoticon</div>
-            )}
-            closeOnDocumentClick
-        >
-        <Emojis addEmoji={setEmoji} /> 
-            </Popup>) 
-            
+        <Popup className='popup' trigger={open => (<div className='sendBtn material-icons'>insert_emoticon</div>)}closeOnDocumentClick>
+        <Emojis className='emojiPanel' addEmoji={setEmoji} /> 
+            </Popup> 
             <div className='sendBtn material-icons' onClick={handleSubmit}>send</div>
         </form>
     )
