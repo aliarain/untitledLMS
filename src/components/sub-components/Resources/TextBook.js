@@ -22,7 +22,8 @@ export class TextBook extends Component {
                      Object.keys(resultObject.Chapters).map(function(key) {
                             // console.log(key, resultObject.Chapters[key]);
                             return(
-                            <a className='chapter' href={resultObject.Chapters[key]}>{key}</a>
+                            <a className='chapter' target="blank"  href={resultObject.Chapters[key]}
+                            >{key}</a>
                             )
                         })
                     }
