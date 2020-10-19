@@ -6,6 +6,7 @@ CATALYST.LMS Learning Management System is an easy-to-use LMS designed for easy 
  - [Chamindu Amarasinghe](https://github.com/chamindujs)
  - [Chamuthu Edirisooriya](https://github.com/Chamuthu030828)
  - [Sachintha Abeyrathne](https://github.com/SachinthaAbeyrathne)
+ - [Nithika Senaweera](https://github.com/ns200310)
  
  **Features**
  - [ ] Forums
