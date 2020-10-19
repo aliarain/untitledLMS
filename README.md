@@ -21,21 +21,21 @@ CATALYST.LMS Learning Management System is an easy-to-use LMS designed for easy 
  This Project is being developed as an REACT app: Please read the following to setup your Local Development Environment;
 
 First, fork this repository and then clone it.
-  `git clone https://github.com/[yourUSRname]/untitledLMS.git`
+  ## `git clone https://github.com/[yourUSRname]/untitledLMS.git`
 Navigate to the root folder of the app.
-  `cd untitledLMS`
+  ## `cd untitledLMS`
 To install all the dependencies you need, just run this command in the root directory : 
-  `npm install`
+  ## `npm install`
 In the project directory, you can run:
-  `npm start`
+  ## `npm start`
 Runs the app in the development mode.<br  />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br  />
 You will also see any lint errors in the console.
-  `npm test`
+  ## `npm test`
 Launches the test runner in the interactive watch mode.<br  />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-  `npm run build`
+ ## `npm run build`
 Builds the app for production to the `build` folder.<br  />
 It correctly bundles React in production mode and optimizes the build for the best performance.
 The build is minified and the filenames include the hashes.<br  />
