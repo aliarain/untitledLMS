@@ -51,18 +51,20 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 To learn React, check out the [React documentation](https://reactjs.org/).
 
 **NPM Dependencies**
+
  *Backend Dependencies*
- - react 
- - react-redux
- - firebase
- - react-redux-firebase
- - redux-thunk
- - react-redux-dom
+  - react 
+  - react-redux
+  - firebase
+  - react-redux-firebase
+  - redux-thunk
+  - react-redux-dom
+ 
  *Frontend Dependencies*
- - momentjs
- - emoji-picker-react
- - reactjs-popup
- - react-flippy
+  - momentjs
+  - emoji-picker-react
+  - reactjs-popup
+  - react-flippy
  
 
 **Please Note :**
