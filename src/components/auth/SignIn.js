@@ -28,8 +28,8 @@ export class SignIn extends Component {
         return (
             <div className='AuthForm'>
                     <div className='container'>
-                       <div className='titleDiv'>untitledLMS
-                       <div className='titleSmall'>a better way....</div>
+                       <div className='titleDiv'>CATALYST.LMS
+                       <div className='titleSmall'>quick learning....</div>
                        </div>
                        <div className='separator'>
                        </div>

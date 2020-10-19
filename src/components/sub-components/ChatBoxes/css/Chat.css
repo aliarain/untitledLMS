@@ -44,7 +44,8 @@ textarea{
 
 .sendBtn:hover{
     transform: rotate(-45deg);
-    background-color: #00b074;
+    /* background-color: #00b074; */
+    box-shadow: inset 0px 0px 0px 50px #00b074;
     color: #212327;
 }
 
