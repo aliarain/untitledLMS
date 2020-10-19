@@ -11,6 +11,7 @@ export class NavBar extends Component {
         if(!auth.uid){
             return <Redirect to='/signin' />
         }
+        console.log(profile)
         return (
             <div className='sidebar'>
                 <div className='nav-link profile'>

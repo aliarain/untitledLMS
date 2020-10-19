@@ -79,11 +79,13 @@ textarea{
 .chatIn{
     border-radius: 0.5em 0.5em 0.5em 0;
     align-self: flex-start;
+    box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.25);
 }
 
 .chatOut{
     border-radius: 0.5em 0.5em 0em 0.5em;
     align-self: flex-end;
+    box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.25);
     /* justify-content: flex-end; */
 }
 

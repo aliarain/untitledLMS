@@ -8,6 +8,7 @@
     flex-direction: column;
     align-items: center;
     border-radius: 0 1em 1em 0;
+    box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.25);
     /* padding-top: 2.5%;
     padding-bottom: 2.5%; */
     /* justify-content: space-evenly; */
@@ -148,4 +149,115 @@
     color: #00b074;
     font-family: 'Fredoka One', cursive;
     font-size: 3em;
+}
+
+.dashboard{
+    width: 100%;
+    height: 100%;
+    padding: 3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.dashboard-sec-1{
+    width: 72.5%;
+    height: 100%;
+    background-color: #212327;
+    border-radius: 1em;
+}
+
+.dashboard-sec-2{
+    width: 25%;
+    height: 100%;
+    /* background-color: #212327; */
+    border-radius: 1em;
+}
+
+.apps{
+  width: 100%;
+  height: 45%;
+  /* background-color: #212327; */
+  /* padding-top: 2%; */
+  display: flex;
+  flex-direction: column;
+}
+
+.app-row{
+    width: 100%;
+    height: 50%;
+    /* background-color: #212327; */
+    /* border-radius: 1em; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2.5%;
+}
+
+.app,.flippy-container{
+    height: 100%;
+    width: 47.5%;
+    /* background-color: #212327; */
+    border-radius: 1em;
+    box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.25);
+}
+
+
+.app-front{
+    width: 100% !important;
+    height: 100% !important;
+    background-color: #212327;
+    border-radius: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #00b074;
+}
+
+.app-back{
+    border: 2px solid #00b074;
+    background-color: #212327;
+    border-radius: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-link{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-size{
+    width: 95%;
+    height: auto;
+}
+
+.clock{
+    width: 100%;
+    height: 20%;
+    background-color: #212327;
+    border-radius: 1em;
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.25);
+}
+
+.displayflex{
+    color: #fff;
+    font-family: 'Ubuntu';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.clock-time{
+    font-size: 2.5em;
 }

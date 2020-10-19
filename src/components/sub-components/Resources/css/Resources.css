@@ -8,6 +8,7 @@ padding: 2.5%;
     padding: 5%;
     background-color: #212327;
     border-radius: 1em;
+    box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.25);
 }
 
 .TextBooks{
@@ -44,7 +45,8 @@ padding: 2.5%;
 
 .subject:hover{
     transform: scale(1.05);
-    background-color: #161819;
+    /* background-color: #161819; */
+    box-shadow: inset 0px 0px 0px 1px #00b074;
     color: #00b074;
     border-radius: 1em;
 }
