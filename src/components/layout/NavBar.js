@@ -11,7 +11,6 @@ export class NavBar extends Component {
         if(!auth.uid){
             return <Redirect to='/signin' />
         }
-        console.log(profile)
         return (
             <div className='sidebar'>
                 <div className='nav-link profile'>
@@ -26,7 +25,7 @@ export class NavBar extends Component {
                 </div>
                 <span className='nav-topic'>Tabs</span>
                 <NavLink  exact to='/' className='nav-link' activeClassName="nav-link--active">
-               <div className='material-icons nav-icon'>home</div>
+               <div className='material-icons nav-icon'>dashboard</div>
                <span className='nav-link-topic'>Dashboard</span>
                </NavLink>
                <NavLink to='/events' className='nav-link' activeClassName="nav-link--active">

@@ -2,13 +2,56 @@ import React, { Component } from 'react'
 import Flippy, { FrontSide, BackSide } from 'react-flippy';
 import { Link } from 'react-router-dom'
 import Clock from './Clock'
+import { connect } from 'react-redux'
+// import { NavLink } from 'react-router-dom';
+import Lessons from './Dashboard-SubComponents/Lessons';
+import Overview from './Dashboard-SubComponents/Overview'
+import Notes from './Dashboard-SubComponents/Notes'
 
-export default class Dashboard extends Component {
+export class Dashboard extends Component {
+    state = {
+        tabTitle: 'overview'
+    }
+    handleChangeTab = (e) =>{
+        this.setState({
+            tabTitle:e.target.id
+          })
+    }
     render() {
+        let tab
+        let tabHeaderA
+        let tabHeaderB
+        let tabHeaderC
+        if(this.state.tabTitle==='overview'){
+          tab = <Overview />
+          tabHeaderA = 'db-tab--active'
+          tabHeaderB = ''
+          tabHeaderC = ''
+        }else if(this.state.tabTitle==='notes'){
+            tab = <Notes />
+            tabHeaderA = ''
+            tabHeaderB = 'db-tab--active'
+            tabHeaderC = ''
+        }
+        else if(this.state.tabTitle==='lessons'){
+            tab = <Lessons />
+            tabHeaderA = ''
+            tabHeaderB = ''
+            tabHeaderC = 'db-tab--active'
+        }
         return (
             <div className='routeArea'>
                 <div className='dashboard'>
-                    <div className='dashboard-sec-1'></div>
+                    <div className='dashboard-sec-1'>
+                        <div className='db-sec-1-navbar'>
+                            <span className={'db-tab-title '+tabHeaderA} id='overview' onClick={this.handleChangeTab}>Overview</span>
+                            <span className={'db-tab-title '+tabHeaderC} id='lessons' onClick={this.handleChangeTab}>Lessons</span>
+                            <span className={'db-tab-title '+tabHeaderB} id='notes'onClick={this.handleChangeTab}>Notes</span>
+                        </div>
+                        <div className='db-tab'>
+                           {tab}
+                        </div>
+                    </div>
                     <div className='dashboard-sec-2'>
                         <div className='clock'>
                            <Clock />
@@ -57,3 +100,11 @@ export default class Dashboard extends Component {
         )
     }
 }
+
+const mapStateToProps = (state) => {
+    return {
+        authError: state.auth.authError,
+        auth: state.firebase.auth
+    }
+ }
+ export default connect(mapStateToProps, null)(Dashboard)

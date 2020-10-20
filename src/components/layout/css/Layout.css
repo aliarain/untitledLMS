@@ -72,6 +72,9 @@
 .nav-link:hover > .nav-icon{
     color: #fff !important;
 }
+.nav-link:hover > .nav-link-topic{
+    color: #fff !important;
+}
 
 .nav-link--active {
     /* border-bottom: 3px solid #00b074; */
@@ -163,8 +166,8 @@
 .dashboard-sec-1{
     width: 72.5%;
     height: 100%;
-    background-color: #212327;
-    border-radius: 1em;
+    /* background-color: #212327; */
+    /* border-radius: 1em; */
 }
 
 .dashboard-sec-2{
@@ -260,4 +263,40 @@
 
 .clock-time{
     font-size: 2.5em;
+}
+
+.db-sec-1-navbar{
+    width: 100%;
+    height: 7.5%;
+   
+    display: flex;
+    flex-direction: row;
+}
+
+.db-tab-title{
+  height: 100%;
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 1em ;
+  font-family: 'Ubuntu';
+  background-color: #111214;
+  color: #00b074;
+  border-radius: 1em 1em 0 0 ;
+}
+
+.db-tab--active{
+    /* border-bottom: 2px solid #00b074; */
+    /* box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.25); */
+    background-color: #212327;
+}
+
+.db-tab{
+    width: 100%;
+    height: 92.5%;
+    background-color: #212327;
+    border-radius: 0 1em 1em 1em;
+    padding: 2.5%;
 }
