@@ -1,0 +1,109 @@
+.profileSec{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   padding: 2.5%;
+}
+
+.profile-section{
+    width: 100%;
+    height: 100%;
+    background-color: #212327;
+    border-radius: 1em;
+    padding: 2.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.profile-set-information{
+    width: 100%;
+    height: 45%;
+    /* background-color: #161819; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 2.5%; */
+    /* border-radius: 1em; */
+    border-bottom: 2px solid #00b074;
+}
+
+.profile-update-information{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    /* justify-content: space-between; */
+}
+
+.profile-set-icon{
+    width: 18.5%;
+    height: 80%;
+    border-radius: 50%;
+    background-color: #00b074;
+    border: 5px solid #028157;
+    color: white;
+    font-family: 'Ubuntu';
+    font-size: 5em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+.profile-set-data{
+    width: 80%;
+    height: 100%;
+    /* background-color: #161819; */
+    font-family: 'Ubuntu';
+    padding: 5% 5% 5% 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.profile-set-data-Name{
+    color: #fff;
+    font-size: 2em;
+}
+
+.profile-set-data-Email{
+    color: #fff;
+    font-size: 1em;
+}
+
+.profile-set-data-Grade{
+    color: #fff;
+    font-size: 1em;
+}
+
+.profile-set-icon:hover{
+    transform: scale(1.01);
+    border-radius: 20px solid #028157;
+}
+
+.email-text{
+    color: #00b074;
+}
+
+.signOut-btn{
+    margin-top: 1.5%;
+    width: 20%;
+    height: 85%;
+    background-color: #00b074;
+    font-family: 'Ubuntu', sans-serif;
+    border: none;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.signOut-btn:hover{
+    background-color: #212327;
+    font-family: 'Ubuntu', sans-serif;
+    border: 2px solid #00b074;
+    transform: scale(1.01);
+}
