@@ -13,7 +13,6 @@
     /* padding-right: 25%; */
     /* padding-left: 25%; */
 }
-
 .title{
     color: white;
     font-family: 'Ubuntu', sans-serif;
@@ -114,3 +113,37 @@ label{
     background-color: rgba(255, 255, 255, 0.685);
 }
 
+@media only screen and (max-width: 600px) {
+    .AuthForm{
+        background-color: #212327;
+    }
+    .container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color:  #212327;
+        align-items: center;
+        justify-content:center;
+    }
+    .separator{
+        display: none;
+        /* width: 90%;
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.685); */
+    }
+    .titleDiv{
+        width: 75%;
+        height: 10%;
+        font-size: 2em;
+    }
+    .titleSmall{
+        display: none;
+    }
+    form{
+        width: 95% !important;
+        /* height: 100%; */
+    }
+    .signup-cont{
+        height: 75%;
+    }
+  }

@@ -14,7 +14,6 @@ export class QuestionDetails extends Component {
              return <Redirect to='/forum' />
          }
     const questionid = question.id
-    console.log(question.answers)
     var answer = ''
      const handleChange = (e) =>{
          answer = e.target.value
@@ -47,7 +46,7 @@ export class QuestionDetails extends Component {
             <div className='forumAnswerArea'>
             <form className='forum-send-area' id='form'>
             <textarea className='forum-txtarea' onChange={handleChange} id='message' placeholder='Type your answer......'></textarea>
-            <div className='sendBtn material-icons' onClick={handleSubmit} >send</div>
+            <div className='sendBtn material-icons forumSend' onClick={handleSubmit} >send</div>
         </form>
             </div>
             </div>

@@ -31,7 +31,7 @@ export class CreateQuestion extends Component {
                      <textarea className='ask-txtarea-textarea' id="content" required onChange={this.handleChange} />
                   </div>
                   <div className="input-field createbtn">
-                     <button className='btn lighten-1 z-depth-0 ' onClick={this.handleSubmit}>Create Question</button>
+                     <button className='btn lighten-1 z-depth-0 quest-btn' onClick={this.handleSubmit}>Create Question</button>
                   </div>
             </form>
         )

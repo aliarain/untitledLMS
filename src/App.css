@@ -39,3 +39,13 @@
     transform: rotate(360deg);
   }
 }
+
+
+.meetingform{
+  height: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-left: 20%;
+  padding-right: 20%;
+}

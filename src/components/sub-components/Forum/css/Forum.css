@@ -259,3 +259,83 @@ justify-content: space-between;
  font-size: 0.75em;
 }
 
+
+@media only screen and (max-width: 600px) {
+    .forum{
+        flex-direction: column-reverse;
+    }
+    .forumNotifications{
+        background-color: unset;
+        height: 7.5%;
+        width: 100%;
+    }
+    .forumNotificationArea{
+        display: none;
+        background-color: unset;
+    }
+    .forumNewQuestion{
+        width: 100%;
+        height: 100%;
+    }
+    .forumList{
+        width: 100%;
+        height: 90%;
+        overflow-x: hidden;
+    }
+    .questions{
+        overflow-x: hidden;
+    }
+    .question-data {
+        display: flex;
+        flex-direction: column;
+        width: 85%;
+        height: 100%;
+    }
+    .answer-btn{
+        width: 15%;
+    }
+    .newQuestion{
+        height: 90%;
+        width: 100% !important;
+    }
+    .ask-input{
+        width: 85%;
+    }
+    .ask-txtarea{
+        width: 85%;
+    }
+    .createbtn{
+        width: 85% !important;
+    }
+    .forumAnswerArea{
+        height: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .forum-send-area{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .forumSend{
+        width:10.5%
+    }
+    .contentDetails {
+        font-size: 0.9em;
+        color: #fff;
+        font-family: 'Ubuntu';
+    }
+    .titleDetails {
+        font-size: 1.2em;
+    }
+    .question-summary-author {
+        font-family: 'Ubuntu';
+        color: rgba(255, 255, 255, 0.726);
+        font-size: 0.75em;
+    }
+    .forum-txtarea{
+        width: 85% !important;
+    }
+}
