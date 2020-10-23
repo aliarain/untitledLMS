@@ -40,6 +40,10 @@ export class NavBar extends Component {
                <div className='material-icons nav-icon'>forum</div>
                <span className='nav-link-topic'>Forum</span>
                </NavLink>
+               <NavLink to='/video' className='nav-link' activeClassName="nav-link--active">
+               <div className='material-icons nav-icon settings-icon'>live_tv</div>
+               <span className='nav-link-topic'>Live Classes</span>
+               </NavLink>
                <NavLink to='/resources' className='nav-link' activeClassName="nav-link--active">
                <div className='material-icons nav-icon settings-icon'>book</div>
                <span className='nav-link-topic'>Resouces</span>

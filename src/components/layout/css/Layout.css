@@ -299,6 +299,8 @@
     background-color: #212327;
     border-radius: 0 1em 1em 1em;
     padding: 2.5%;
+<<<<<<< HEAD
+=======
 }
 
 .responsive-navbar{
@@ -377,4 +379,5 @@
         border-radius: 0 0 1em 1em;
         height: 97.5%;
     }
+>>>>>>> 50c53a4bf41f369b7dee8cc10db1882a873922a1
 }

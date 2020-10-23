@@ -170,6 +170,8 @@
     font-size: 0.5em;
     color: #636262;
     font-weight: 400;
+<<<<<<< HEAD
+=======
 }
 
 @media only screen and (max-width: 600px) {
@@ -199,4 +201,5 @@
     .check-btn{
         width: 15%;
     }
+>>>>>>> 50c53a4bf41f369b7dee8cc10db1882a873922a1
 }

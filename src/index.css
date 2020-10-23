@@ -5,6 +5,8 @@ html,body,#root{
   height: 100%;
   margin: 0;
   padding: 0;
+<<<<<<< HEAD
+=======
   overflow-x: hidden;
   background-color: #161819;
 }
@@ -12,6 +14,7 @@ html,body,#root{
 #root{
   padding-bottom: 2%;
 }
+>>>>>>> 50c53a4bf41f369b7dee8cc10db1882a873922a1
 }
 
 body {

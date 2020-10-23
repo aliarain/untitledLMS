@@ -31,6 +31,7 @@ function App() {
       <Route path='/forum' component={Forum} />
       <Route path='/question/:id' component={QuestionDetails} />
       <Route path='/ask' component={CreateQuestion} />
+      <Route path='/video' component={Video} />
       <Route path='/resources' component={Resources} />
       <Route path='/textbook/SinhalaMedium/:id' component={TextBook} />
       <Route path='/textbook/EnglishMedium/:id' component={TextBook} />
