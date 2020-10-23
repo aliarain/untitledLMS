@@ -159,8 +159,6 @@ nav{
 path{
     /* background-color: #00b074; */
     display: none;
-<<<<<<< HEAD
-=======
 }
 
 @media only screen and (max-width: 600px) {
@@ -193,5 +191,4 @@ path{
         min-width: 25%;
         padding: 2.5%;
     }
->>>>>>> 50c53a4bf41f369b7dee8cc10db1882a873922a1
 }

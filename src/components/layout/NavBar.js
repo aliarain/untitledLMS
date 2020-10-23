@@ -28,10 +28,6 @@ export class NavBar extends Component {
                <div className='material-icons nav-icon'>dashboard</div>
                <span className='nav-link-topic'>Dashboard</span>
                </NavLink>
-               <NavLink to='/events' className='nav-link' activeClassName="nav-link--active">
-               <div className='material-icons nav-icon'>event</div>
-               <span className='nav-link-topic'>Events</span>
-               </NavLink>
                <NavLink to='/chat' className='nav-link' activeClassName="nav-link--active">
                <div className='material-icons nav-icon'>chat</div>
                <span className='nav-link-topic'>Public Chat</span>

@@ -7,7 +7,6 @@ import SignIn from './components/auth/SignIn'
 import SignUp from './components/auth/SignUp'
 import Chat from './components/Chat'
 import Profile from './components/Profile'
-import Events from './components/Events'
 import Forum from './components/Forum'
 import Resources from './components/Resources'
 import TextBook from './components/sub-components/Resources/TextBook'
@@ -15,6 +14,7 @@ import Settings from './components/Settings'
 import QuestionDetails from './components/sub-components/Forum/QuestionDetails'
 import CreateQuestion from './components/sub-components/Forum/CreateQuestion'
 import ResponsiveNavBar from './components/layout/ResponsiveNavBar'
+import Video from './components/webrtc'
 
 function App() {
   return (
@@ -27,7 +27,6 @@ function App() {
       <Route path='/signup' component={SignUp} />
       <Route path='/signin' component={SignIn} />
       <Route path='/profile' component={Profile} />
-      <Route path='/events' component={Events} />
       <Route path='/forum' component={Forum} />
       <Route path='/question/:id' component={QuestionDetails} />
       <Route path='/ask' component={CreateQuestion} />

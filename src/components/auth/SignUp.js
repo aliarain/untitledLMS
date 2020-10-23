@@ -29,11 +29,7 @@ export class SignUp extends Component {
       }
         return (
             <div className='AuthForm'>
-<<<<<<< HEAD
                <div className='container'>
-=======
-               <div className='container signup-cont'>
->>>>>>> 50c53a4bf41f369b7dee8cc10db1882a873922a1
                <div className='titleDiv'>CATALYST.LMS
                        <div className='titleSmall'>quick learning....</div>
                        </div>
