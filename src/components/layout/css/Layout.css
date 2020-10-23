@@ -299,4 +299,85 @@
     background-color: #212327;
     border-radius: 0 1em 1em 1em;
     padding: 2.5%;
+<<<<<<< HEAD
+=======
+}
+
+.responsive-navbar{
+    display: none;
+}
+
+
+@media only screen and (min-width: 600px) {
+    .sidebar{
+        transform: translateX(0) !important;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .App{
+        flex-direction: column;
+    }
+    .sidebar{
+        width: 75%;
+        position: absolute;
+        transition: 0.5s ease-in-out;
+        transform-origin: left;
+        z-index: 1000;
+        transform: translateX(-100%);
+    }
+    .responsive-navbar{
+        display: unset;
+        width: 100%;
+        background-color: #212327;
+        border-radius: 0 0 1em 1em;
+        height: 7.5%;
+        display: flex;
+        flex-direction: row;
+        padding-left:5%;
+        padding-right:5%;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .more-info-sec{
+        display: none;
+    }
+    .routeArea{
+        width: 100%;
+        height: 90%;
+    }
+    .rsp-nav-btn{
+        color: #fff;
+        transition: 0.5s;
+    }
+    .rspTitle{
+        width: fit-content !important;
+    }
+
+    .dashboard{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .apps{
+        display: none;
+    }
+    .dashboard-sec-2{
+        width: 100%;
+        height: 20%;
+    }
+    .clock{
+        height: 100%;
+    }
+
+    .dashboard-sec-1{
+        padding-top: 5%;
+        width: 100%;
+    }
+    .db-tab-title{
+        width: 33.33%;
+    }
+    .db-tab{
+        border-radius: 0 0 1em 1em;
+        height: 97.5%;
+    }
+>>>>>>> 50c53a4bf41f369b7dee8cc10db1882a873922a1
 }

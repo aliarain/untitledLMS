@@ -170,4 +170,36 @@
     font-size: 0.5em;
     color: #636262;
     font-weight: 400;
+<<<<<<< HEAD
+=======
+}
+
+@media only screen and (max-width: 600px) {
+    .db-overview-cards{
+        flex-direction: column;
+        height: 50%;
+    }
+    .db-overview-cards{
+        flex-direction: column;
+        height: 90%;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .db-overview-card{
+        width: 80%;
+        height: 25%;
+    }
+    .lesson-data{
+        width: 85%;
+    }
+    .lesson-summary-title {
+        font-size: 1em;
+    }
+    .lesson-summary-author {
+        font-size: 0.65em;
+    }
+    .check-btn{
+        width: 15%;
+    }
+>>>>>>> 50c53a4bf41f369b7dee8cc10db1882a873922a1
 }

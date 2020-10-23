@@ -12,7 +12,7 @@ export class NavBar extends Component {
             return <Redirect to='/signin' />
         }
         return (
-            <div className='sidebar'>
+            <div className='sidebar' id='sidebar'>
                 <div className='nav-link profile'>
                     <NavLink to='/profile'>
                 <div className='profile-icon'>{profile.initials}</div>
