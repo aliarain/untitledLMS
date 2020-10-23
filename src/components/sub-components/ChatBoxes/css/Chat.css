@@ -160,3 +160,35 @@ path{
     /* background-color: #00b074; */
     display: none;
 }
+
+@media only screen and (max-width: 600px) {
+    .chatRouteArea {
+        height: 92.5%;
+        overflow-y: hidden;
+    }
+    .chat-area {
+        height: 92.5%;
+    }
+    .chat {
+        padding: 5% 2% 2.5% 2%;
+    }
+    .send-area{
+        height: 7.5%;
+        width: 100% !important;
+        align-items: center;
+        overflow: hidden;
+    }
+    .sendBtn{
+        width: 9.5%;
+        height: 75%;
+    }
+    #message{
+        width: 75%;
+        height: 75%;
+        padding: 2%;
+    }
+    .msgbox{
+        min-width: 25%;
+        padding: 2.5%;
+    }
+}

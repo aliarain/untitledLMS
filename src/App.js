@@ -14,12 +14,14 @@ import TextBook from './components/sub-components/Resources/TextBook'
 import Settings from './components/Settings'
 import QuestionDetails from './components/sub-components/Forum/QuestionDetails'
 import CreateQuestion from './components/sub-components/Forum/CreateQuestion'
+import ResponsiveNavBar from './components/layout/ResponsiveNavBar'
 
 function App() {
   return (
     <BrowserRouter>
     <div className="App">
       <NavBar />
+      <ResponsiveNavBar />
       <Switch>
       <Route exact path='/' component={Dashboard} />
       <Route path='/signup' component={SignUp} />

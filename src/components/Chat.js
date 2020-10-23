@@ -6,7 +6,7 @@ import SendArea from './sub-components/ChatBoxes/SendArea'
 export default class Chat extends Component {
     render() {
         return (
-            <div className='routeArea'>
+            <div className='routeArea chatRouteArea'>
                 <div className='chat-area'>
                  <ChatList />
                  </div>
